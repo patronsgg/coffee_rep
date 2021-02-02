@@ -1,0 +1,4 @@
+modules:
+PyQt5
+sys
+sqlite3
