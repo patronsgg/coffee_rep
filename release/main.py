@@ -1,10 +1,11 @@
 import sys
 
-from PyQt5 import uic
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from coffee_rep import addEditCoffeeForm
 from coffee_rep import main_back
 import sqlite3
+
 
 class MainWindow(QMainWindow, main_back.Ui_MainWindow):
     def __init__(self, tool):
@@ -90,7 +91,7 @@ class AddChangeForm(QMainWindow, addEditCoffeeForm.Ui_EditForm):
 
 class SqlMethods:
     def __init__(self):
-        self.con = sqlite3.connect('data\coffee.db')
+        self.con = sqlite3.connect('coffee.db')
         self.cur = self.con.cursor()
 
 
